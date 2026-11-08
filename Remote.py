@@ -198,8 +198,8 @@ ZERO_COUNTS   = ADC_FS // 2      # nominal VCC/2. The sensor's own quiescent
                                  # by B_REST_MT, which is measured in place.
 
 # --- calibration, see the header ---
-B_REST_MT = 50.0            # field with the trigger released
-B_FULL_MT = 69.0            # field at the full throttle stop
+B_REST_MT = 53.0            # field with the trigger released
+B_FULL_MT = 67.0            # field at the full throttle stop
 
 B_MARGIN_MT = 12.0          # slack outside travel before it counts as a fault
 HALL_BAD_N  = 4             # consecutive bad samples (25 ms each) to fault
@@ -889,3 +889,4 @@ async def main():
             await asyncio.sleep_ms(1000)
 
 asyncio.run(main())
+
