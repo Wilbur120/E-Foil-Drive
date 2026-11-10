@@ -140,7 +140,7 @@ typedef struct {
 /* USER CODE BEGIN PD */
 
 /* 1 = bench, 0 = water. Compile-time, so every branch folds away. */
-#define LAB_TEST_MODE   1
+#define LAB_TEST_MODE   0
 
 #if LAB_TEST_MODE
 #warning "LAB_TEST_MODE = 1: overtemperature and DC link trips are DISABLED."
@@ -200,7 +200,7 @@ typedef struct {
 #define IQ_SLEW_A_S     200.0f
 #define OC_TRIP_A       200.0f     /* instantaneous phase trip, rank-1 data  */
 #define OC_CONFIRM_N    2u         /* consecutive samples, see section 4b    */
-#define IDC_TRIP_A      70.0f     /* DC link trip, debounced                */
+#define IDC_TRIP_A      175.0f     /* DC link trip, debounced                */
 #define I_ALIGN_A       8.0f
 #define DT_LIN_A        40.0f      /* MODULATOR dead-time blend width        */
 #define DT_OBS_A        3.0f       /* OBSERVER dead-time model, narrow       */
@@ -245,7 +245,7 @@ typedef struct {
  * THIS IS A BOUND, NOT A PROTECTION: open loop, blind to ESR ageing and
  * ambient. Validate with a thermocouple on the can over a full-duration
  * run. */
-#define IPH_RMS_CONT_A  115.5f
+#define IPH_RMS_CONT_A  110.8f
 #define TAU_CAP_RISE_S   60.0f
 #define TAU_CAP_FALL_S  180.0f
 #define IQ_MAX_FLOOR_A   40.0f
@@ -263,7 +263,7 @@ typedef struct {
  * clean. Useful range 0.2 to 0.5; above 0.6 the damping loop competes with
  * the tracking observer. */
 #define I_STARTUP_A0    16.0f
-#define I_STARTUP_A1    20.0f
+#define I_STARTUP_A1    50.0f
 #define OL_SOFT_S        0.100f
 #define ALIGN_TIME_S     0.7f
 #define OL_ACCEL       600.0f      /* rad/s^2 electrical                     */
