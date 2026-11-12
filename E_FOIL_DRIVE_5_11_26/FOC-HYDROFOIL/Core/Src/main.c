@@ -325,8 +325,8 @@ typedef struct {
  * phase A is the phase driven by CH1. dbg_vd is the check for those. */
 #define CAL_N           4000u      /* 200 ms of averaging                    */
 #define CAL_SETTLE_N     400u      /* 20 ms discarded first                  */
-#define ACS_OFF_MIN     1690.0f
-#define ACS_OFF_MAX     2290.0f
+#define ACS_OFF_MIN     1755.0f
+#define ACS_OFF_MAX     2355.0f
 #define HASS_OFF_MIN    2902.0f
 #define HASS_OFF_MAX    3302.0f
 #define CAL_RETRY_MS    1000u
